@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Static site generator for the Marlowe Studio portfolio.
+Static site generator for the Shawn Wang photography portfolio.
 
 Structure (3 tiers):
   index.html            Photography overview — three category hero sections
@@ -15,7 +15,7 @@ lightbox. Reorder to re-sequence a project.
 """
 import html
 
-BRAND = "Marlowe Studio"
+BRAND = "Shawn Wang"
 
 # ---- category order + overview hero shots -------------------------------
 CATEGORIES = [
@@ -104,7 +104,7 @@ def header():
     return f"""
   <header class="site-header" id="top">
     <a class="wordmark" href="index.html" aria-label="{BRAND} — home">
-      Marlowe<span class="wordmark__thin">Studio</span>
+      Shawn<span class="wordmark__thin">Wang</span>
     </a>
     <nav class="nav" aria-label="Primary">
       <a href="index.html">Photography</a>
@@ -118,19 +118,14 @@ def contact():
       <div class="contact__inner reveal">
         <p class="eyebrow">Contact</p>
         <h2 class="contact__title">Let's make something.</h2>
-        <a class="contact__email" href="mailto:hello@marlowestudio.com">hello@marlowestudio.com</a>
-        <ul class="contact__links">
-          <li><a href="#" rel="noopener">Instagram</a></li>
-          <li><a href="#" rel="noopener">Behance</a></li>
-          <li><a href="#" rel="noopener">Print shop</a></li>
-        </ul>
+        <a class="contact__email" href="mailto:shawn.wang.1667@gmail.com">shawn.wang.1667@gmail.com</a>
       </div>
     </section>"""
 
 def footer():
-    return """
+    return f"""
   <footer class="site-footer">
-    <span>&copy; <span id="year"></span> Marlowe Studio</span>
+    <span>&copy; <span id="year"></span> {BRAND}</span>
     <a href="#top">Back to top &uarr;</a>
   </footer>"""
 
@@ -154,8 +149,8 @@ def lightbox():
 # ------------------------------------------------------------------ pages
 def render_home():
     parts = [head(f"{BRAND} — Photography",
-                  "Photography by Marlowe Studio — portraits, travel, and more."),
-             '<h1 class="sr-only">Marlowe Studio — Photography</h1>',
+                  f"Photography by {BRAND} — portraits, travel, and more."),
+             f'<h1 class="sr-only">{BRAND} — Photography</h1>',
              header(), '\n  <main class="overview">']
     for c in CATEGORIES:
         n = len(projects_in(c["slug"]))

@@ -65,9 +65,8 @@ the full-bleed image at the top of the project page.
 
 ## Notes
 
-- **Placeholders:** "Marlowe Studio" and the contact email/social links are
-  placeholders — swap in the real brand and contacts (nav wordmark + `contact()`
-  in `generate.py`, then regenerate).
+- **Branding:** the nav wordmark and contact email are set in `generate.py`
+  (currently Shawn Wang / shawn.wang.1667@gmail.com) — edit there, then regenerate.
 - **Grid crop:** grid thumbnails are a uniform 4:5 crop for a consistent wall;
   the lightbox always shows the full frame. Landscape shots (a few in Iceland /
   Dunes) are center-cropped in the grid only.

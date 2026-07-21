@@ -1,5 +1,5 @@
 /* =============================================================
-   Marlowe Studio — interactions
+   Shawn Wang — interactions
    Vanilla JS, no dependencies.
    ============================================================= */
 (function () {
