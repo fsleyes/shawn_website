@@ -53,12 +53,18 @@ the full-bleed image at the top of the project page.
 
 ## Adding a shoot
 
-1. Drop originals in `photos/<category>/<shoot>/`.
+1. Drop originals in `photos/<category>/<shoot>/` (originals live outside this repo
+   and are never committed).
 2. Optimize into `assets/full` and `assets/thumb`, naming them `<prefix>-01.jpg`, …
-   in capture order (see the `optimize_project` pattern used previously):
-   ```bash
-   sips --resampleHeightWidthMax 2000 -s format jpeg -s formatOptions 82 in.jpg --out assets/full/prefix-01.jpg
-   sips --resampleHeightWidthMax 1100 -s format jpeg -s formatOptions 72 in.jpg --out assets/thumb/prefix-01.jpg
+   in capture order. Use Pillow, not `sips` — it compresses ~35% smaller at the
+   same visual quality and strips EXIF:
+   ```python
+   from PIL import Image
+   for kind, px, q in (("full", 1500, 70), ("thumb", 850, 68)):
+       im = Image.open(src).convert("RGB")      # convert() drops EXIF/ICC
+       im.thumbnail((px, px), Image.LANCZOS)
+       im.save(f"assets/{kind}/{name}.jpg", "JPEG",
+               quality=q, optimize=True, progressive=True)
    ```
 3. Add a project dict to `PROJECTS` in `generate.py` (slug, title, category, cover,
    hero, and the curated `images` order), then run `python3 generate.py`.
@@ -67,6 +73,10 @@ the full-bleed image at the top of the project page.
 
 - **Branding:** the nav wordmark and contact email are set in `generate.py`
   (currently Shawn Wang / shawn.wang.1667@gmail.com) — edit there, then regenerate.
+- **Titles** are location/theme only — no subject names.
+- **Image weight:** keep `assets/` lean, it is the only heavy thing in the repo
+  (~26 MB for 141 photos). Re-run the optimizer above rather than committing
+  anything straight out of Lightroom.
 - **Grid crop:** grid thumbnails are a uniform 4:5 crop for a consistent wall;
   the lightbox always shows the full frame. Landscape shots (a few in Iceland /
   Dunes) are center-cropped in the grid only.

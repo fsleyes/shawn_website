@@ -27,22 +27,31 @@ CATEGORIES = [
 # ---- projects (curated sequence lives in `images`) ----------------------
 PROJECTS = [
     # Portraits
-    {"slug": "kristin-paint", "title": "Kristin · Paint", "category": "portraits",
+    {"slug": "paint", "title": "Paint", "category": "portraits",
      "year": "2023", "hero": "paint-01", "hero_pos": "50% 30%", "cover": "paint-01",
      "images": ["paint-02", "paint-05", "paint-03", "paint-04", "paint-01"]},
-    {"slug": "claire-beach", "title": "Claire · Beach", "category": "portraits",
+    {"slug": "beach", "title": "Beach", "category": "portraits",
      "year": "2024", "hero": "claire-02", "hero_pos": "50% 40%", "cover": "claire-05",
      "images": ["claire-02", "claire-05", "claire-07", "claire-03", "claire-01",
                 "claire-09", "claire-04", "claire-06", "claire-08"]},
-    {"slug": "kristin-dunes", "title": "Kristin · Dunes", "category": "portraits",
+    {"slug": "dunes", "title": "Dunes", "category": "portraits",
      "year": "2024", "hero": "dunes-05", "hero_pos": "50% 50%", "cover": "dunes-14",
      "images": ["dunes-02", "dunes-14", "dunes-05", "dunes-10", "dunes-07", "dunes-06",
                 "dunes-01", "dunes-13", "dunes-17", "dunes-03", "dunes-15", "dunes-08",
                 "dunes-11", "dunes-09", "dunes-12", "dunes-04", "dunes-16"]},
-    {"slug": "kristin-palos-verdes", "title": "Kristin · Palos Verdes", "category": "portraits",
+    {"slug": "palos-verdes", "title": "Palos Verdes", "category": "portraits",
      "year": "2024", "hero": "palos-05", "hero_pos": "50% 45%", "cover": "palos-04",
      "images": ["palos-04", "palos-02", "palos-03", "palos-01", "palos-05",
                 "palos-06", "palos-07", "palos-08", "palos-09"]},
+    # neon mirror set turning into stark white tile
+    {"slug": "bathroom-lights", "title": "Bathroom Lights", "category": "portraits",
+     "year": "2024", "hero": "bathroom-01", "hero_pos": "50% 40%", "cover": "bathroom-02",
+     "images": ["bathroom-04", "bathroom-01", "bathroom-02", "bathroom-03",
+                "bathroom-06", "bathroom-05", "bathroom-07"]},
+    {"slug": "salton-sea", "title": "Salton Sea", "category": "portraits",
+     "year": "2022", "hero": "salton-07", "hero_pos": "50% 40%", "cover": "salton-01",
+     "images": ["salton-07", "salton-01", "salton-04",
+                "salton-03", "salton-05", "salton-06"]},
     # Travel
     {"slug": "asia", "title": "Asia", "category": "travel",
      "year": "2024", "hero": "asia-09", "hero_pos": "50% 45%", "cover": "asia-09",
@@ -57,6 +66,16 @@ PROJECTS = [
     {"slug": "xinjiang", "title": "Xinjiang", "category": "travel",
      "year": "", "hero": "xinjiang-01", "hero_pos": "50% 46%", "cover": "xinjiang-01",
      "images": [f"xinjiang-{i:02d}" for i in range(1, 20)]},
+    # high desert -> abandonment -> the river
+    {"slug": "boise", "title": "Boise", "category": "travel",
+     "year": "2024", "hero": "boise-01", "hero_pos": "50% 50%", "cover": "boise-07",
+     "images": ["boise-01", "boise-07", "boise-02", "boise-03",
+                "boise-04", "boise-05", "boise-06"]},
+    # black-and-white city breaking into warm color
+    {"slug": "seattle", "title": "Seattle", "category": "travel",
+     "year": "", "hero": "seattle-04", "hero_pos": "50% 40%", "cover": "seattle-07",
+     "images": ["seattle-04", "seattle-01", "seattle-02", "seattle-05",
+                "seattle-03", "seattle-06", "seattle-07"]},
     # Misc
     {"slug": "home", "title": "Home", "category": "misc",
      "year": "2022", "hero": "home-09", "hero_pos": "50% 45%", "cover": "home-08",
