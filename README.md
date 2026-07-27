@@ -24,9 +24,12 @@ Navigation: one **Photography** nav item → the overview. Each overview section
 a clickable hero shot → its category page → a project → the gallery. Every page
 carries a Contact section and footer; project pages show a breadcrumb.
 
-Projects by category:
-- **Portraits** — Kristin · Paint, Claire · Beach, Kristin · Dunes, Kristin · Palos Verdes
-- **Travel** — Asia, Iceland, Xinjiang
+Projects by category (site titles are location/theme only; subject noted here for
+maintenance since one subject recurs across several Portraits shoots):
+- **Portraits** — Beach, Paint*, Studio, Dunes*, Poppies, Palos Verdes*,
+  Orange Tree, Bathroom Lights*, Idaho, Salton Sea* (`*` = same recurring subject —
+  deliberately interspersed with the others, not grouped, on the Portraits page)
+- **Travel** — Asia, Iceland, Xinjiang, Boise, Seattle
 - **Misc** — Home, Lighthouse & Bell Works
 
 ## Run it
@@ -39,7 +42,7 @@ python3 -m http.server 8000   # then visit http://localhost:8000
 
 ## The generator
 
-The 13 pages are generated so they stay consistent. Edit the data at the top of
+The 21 pages are generated so they stay consistent. Edit the data at the top of
 `generate.py` (categories, projects, and each project's ordered `images` list),
 then run:
 
@@ -75,7 +78,7 @@ the full-bleed image at the top of the project page.
   (currently Shawn Wang / shawn.wang.1667@gmail.com) — edit there, then regenerate.
 - **Titles** are location/theme only — no subject names.
 - **Image weight:** keep `assets/` lean, it is the only heavy thing in the repo
-  (~26 MB for 141 photos). Re-run the optimizer above rather than committing
+  (~31 MB for 161 photos). Re-run the optimizer above rather than committing
   anything straight out of Lightroom.
 - **Grid crop:** grid thumbnails are a uniform 4:5 crop for a consistent wall;
   the lightbox always shows the full frame. Landscape shots (a few in Iceland /
