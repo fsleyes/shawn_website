@@ -66,6 +66,11 @@ PROJECTS = [
      "year": "2022", "hero": "salton-07", "hero_pos": "50% 40%", "cover": "salton-01",
      "images": ["salton-07", "salton-01", "salton-04",
                 "salton-03", "salton-05", "salton-06"]},
+    # long-exposure light-trail portraits, most abstract to least
+    {"slug": "blur", "title": "Blur", "category": "portraits",
+     "year": "2026", "hero": "blur-06", "hero_pos": "55% 40%", "cover": "blur-06",
+     "images": ["blur-01", "blur-02", "blur-03",
+                "blur-04", "blur-05", "blur-06"]},
     # Travel
     {"slug": "asia", "title": "Asia", "category": "travel",
      "year": "2024", "hero": "asia-09", "hero_pos": "50% 45%", "cover": "asia-09",
