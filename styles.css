@@ -402,7 +402,6 @@ h1, h2 { margin: 0; font-weight: 400; }
   text-align: center; gap: 16px;
   padding: var(--pad); z-index: 2;
 }
-.cat-hero--low .cat-hero__content { justify-content: flex-end; padding-bottom: clamp(28px, 7%, 64px); }
 .cat-hero__title {
   font-family: var(--font-display);
   font-weight: 700;
